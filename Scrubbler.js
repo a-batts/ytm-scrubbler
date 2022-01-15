@@ -9,13 +9,16 @@ try {
         if (entry.header == 'YouTube Music') {
             entryDate = new Date(entry.time);
             if (entryDate < startDate && entry.subtitles != null) {
+                //Remove " - Topic" from artist name
                 let artistName = entry.subtitles[0].name.substring(0, entry.subtitles[0].name.indexOf(' - Topic'));
+                //Remove "watched" from beginning of song title
                 let trackName = entry.title.substring(8);
                 let newEntry = {
                     'artistName': artistName,
                     'trackName': trackName,
                     'datetime': entry.time,
                 }
+                //Only push if artist name exists (only exists on official audio songs)
                 if (artistName && trackName)
                     newData.push(newEntry);
             }
