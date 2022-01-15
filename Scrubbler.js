@@ -19,7 +19,8 @@ try {
                     'datetime': entry.time,
                 }
 
-                newData.push(newEntry);
+                if (artistName && trackName)
+                    newData.push(newEntry);
             }
         }
     });
@@ -27,7 +28,7 @@ try {
     newData = JSON.stringify(newData);
     fs.writeFileSync('scrubbed-watch-history.json', newData);
 
-    console.log('Finish scrubbling file!');
+    console.log('Finished scrubbling file!');
 }
 catch (error) {
     if (error.code === 'ENOENT') {
