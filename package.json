@@ -1,0 +1,26 @@
+{
+  "name": "ytm-scrubbler",
+  "version": "1.0.0",
+  "description": "Convert YouTube Music watch history to a Last.fm scrubbable format",
+  "main": "Scrubbler.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/a-batts/ytm-scrubbler.git"
+  },
+  "keywords": [
+    "ytm",
+    "lastfm"
+  ],
+  "author": "Alex Batts",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/a-batts/ytm-scrubbler/issues"
+  },
+  "homepage": "https://github.com/a-batts/ytm-scrubbler#readme",
+  "dependencies": {
+    "fs": "^0.0.1-security"
+  }
+}
